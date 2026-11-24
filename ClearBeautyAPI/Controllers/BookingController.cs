@@ -2,6 +2,8 @@
 using ClearBeautyAPI.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System;
+using System.Threading.Tasks;
 
 namespace ClearBeautyAPI.Controllers
 {
@@ -16,29 +18,31 @@ namespace ClearBeautyAPI.Controllers
             _context = context;
         }
 
-        // POST: api/bookings — создать запись
+        // POST: api/Bookings
         [HttpPost]
-        public async Task<ActionResult<booking>> CreateBooking(booking booking)
+        public async Task<ActionResult<Booking>> CreateBooking(Booking booking)
         {
-            booking.status = "pending";
-            booking.bookingDate = DateTime.Now;
+            booking.Status = "pending";
+            booking.BookingDate = DateTime.Now;
 
             _context.Bookings.Add(booking);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction(nameof(GetBooking), new { id = booking.id }, booking);
+            return CreatedAtAction(nameof(GetBooking), new { id = booking.Id }, booking);
         }
 
-        // GET: api/bookings/5 — получить запись по ID
+        // GET: api/Bookings/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<booking>> GetBooking(int id)
+        public async Task<ActionResult<Booking>> GetBooking(int id)
         {
             var booking = await _context.Bookings
-                .Include(b => b.service)
+                .Include(b => b.Service)
                     .ThenInclude(s => s.Master)
-                .FirstOrDefaultAsync(b => b.id == id);
+                .FirstOrDefaultAsync(b => b.Id == id);
 
-            if (booking == null) return NotFound();
+            if (booking == null)
+                return NotFound();
+
             return booking;
         }
     }
