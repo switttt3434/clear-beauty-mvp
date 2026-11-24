@@ -1,47 +1,66 @@
 
-/* Страница профиля мастера */
+/* ==============================
+   ПРОФИЛЬ МАСТЕРА CLEAR BEAUTY
+============================== */
+
+.master-profile-page {
+    max-width: 1180px;
+    margin: 40px auto;
+    padding: 0 25px 60px;
+    color: #40364d;
+}
 
 .profile-header {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 25px 7%;
-    background: #ffffff;
-    border-bottom: 1px solid #eee8f5;
+    justify-content: space-between;
+    padding: 22px 7%;
+    background: #fff;
+    border-bottom: 1px solid #eee8f4;
 }
 
 .profile-logo {
-    font-size: 26px;
+    color: #9879b8;
+    text-decoration: none;
+    font-size: 27px;
     font-weight: 700;
-    color: #9274b5;
+}
+
+.profile-nav {
+    display: flex;
+    gap: 25px;
+}
+
+.profile-nav a {
+    color: #766783;
     text-decoration: none;
+    font-size: 14px;
 }
 
-.profile-back {
-    text-decoration: none;
-    color: #7e6b91;
-    font-size: 15px;
+.profile-nav a:hover {
+    color: #a486c7;
 }
 
-.master-profile-page {
-    max-width: 1200px;
-    margin: 40px auto;
-    padding: 0 25px;
+.profile-loading {
+    text-align: center;
+    padding: 80px;
 }
 
-.master-profile-card {
+/* Основная карточка */
+
+.master-profile-main {
     display: grid;
     grid-template-columns: 380px 1fr;
-    gap: 40px;
-    padding: 35px;
-    background: #fff;
+    gap: 35px;
+    padding: 30px;
+    background: white;
     border-radius: 24px;
-    box-shadow: 0 8px 35px rgba(130, 100, 160, 0.08);
+    box-shadow: 0 8px 35px rgba(120, 90, 150, 0.08);
 }
 
 .master-profile-photo {
     width: 100%;
-    height: 450px;
+    height: 460px;
     object-fit: cover;
     border-radius: 20px;
 }
@@ -49,117 +68,351 @@
 .master-profile-info {
     display: flex;
     flex-direction: column;
-    gap: 18px;
+    align-items: flex-start;
 }
 
 .master-profile-name {
     font-size: 32px;
-    color: #33283d;
-    margin: 0;
+    margin: 5px 0 12px;
+    color: #3c304b;
 }
 
 .master-profile-specialty {
-    font-size: 17px;
-    color: #9277b2;
+    color: #9677b8;
+    font-size: 16px;
+    margin-bottom: 15px;
 }
 
 .master-profile-rating {
-    font-size: 16px;
-    color: #d59b39;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 20px;
+    color: #d6a348;
+    font-size: 17px;
+}
+
+.master-profile-rating span {
+    color: #74677e;
+    font-size: 14px;
 }
 
 .master-profile-description {
-    color: #77717e;
     font-size: 15px;
-    line-height: 1.7;
+    color: #777080;
+    line-height: 1.8;
 }
 
-.master-profile-section {
-    margin-top: 25px;
+.master-profile-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 15px 0;
 }
 
-.master-profile-section h2 {
-    color: #392e46;
-    font-size: 21px;
+.master-profile-tag {
+    padding: 9px 14px;
+    background: #f3edf9;
+    color: #9274b2;
+    border-radius: 30px;
+    font-size: 13px;
 }
 
-.master-profile-services {
+.master-profile-experience {
+    margin-top: 15px;
+    color: #61566f;
+    font-size: 15px;
+}
+
+.master-profile-experience strong {
+    color: #9879b8;
+}
+
+/* Общие секции */
+
+.profile-section {
+    margin-top: 35px;
+    padding: 30px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 5px 25px rgba(120, 90, 150, 0.05);
+}
+
+.profile-section-title {
+    font-size: 23px;
+    margin: 0 0 25px;
+    color: #40344f;
+}
+
+/* Место работы */
+
+.master-workplace {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: #756981;
+    line-height: 1.6;
+}
+
+.master-workplace-name {
+    color: #9677b5;
+    font-weight: 600;
+    font-size: 17px;
+}
+
+.master-workplace-address {
+    font-size: 15px;
+}
+
+/* Услуги */
+
+.master-services-list {
     display: flex;
     flex-direction: column;
     gap: 12px;
 }
 
-.master-profile-service {
+.master-service-item {
     display: flex;
     justify-content: space-between;
-    gap: 15px;
-    padding: 15px 18px;
-    border-radius: 12px;
-    background: #f8f5fb;
-    color: #51445e;
+    align-items: center;
+    gap: 20px;
+    padding: 17px 20px;
+    background: #faf8fc;
+    border: 1px solid #f0eaf6;
+    border-radius: 13px;
 }
 
-.master-profile-price {
+.master-service-name {
+    color: #5b5069;
+    font-size: 15px;
+}
+
+.master-service-details {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.master-service-duration {
+    color: #a198ad;
+    font-size: 13px;
+}
+
+.master-service-price {
+    color: #9878b8;
     font-weight: 600;
-    color: #9273b2;
     white-space: nowrap;
 }
 
-.master-profile-book {
-    margin-top: 20px;
-    padding: 16px 25px;
+/* Портфолио */
+
+.master-portfolio {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.master-portfolio-item {
+    height: 220px;
+    border-radius: 15px;
+    overflow: hidden;
+    background: #f1eaf6;
+}
+
+.master-portfolio-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Отзывы */
+
+.master-reviews {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.master-review {
+    padding: 20px;
+    background: #faf8fc;
+    border-radius: 15px;
+}
+
+.master-review-top {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.master-review-name {
+    font-weight: 600;
+    color: #544663;
+}
+
+.master-review-date {
+    color: #a69bb3;
+    font-size: 13px;
+}
+
+.master-review-stars {
+    color: #d6a348;
+    margin-bottom: 10px;
+}
+
+.master-review-text {
+    color: #777080;
+    line-height: 1.7;
+    font-size: 14px;
+}
+
+/* Запись */
+
+.master-booking {
+    background: linear-gradient(135deg, #f5effb, #fcfaff);
+}
+
+.master-booking-text {
+    color: #84768f;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.master-booking-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.master-booking-form label {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    color: #675975;
+    font-size: 14px;
+}
+
+.master-booking-form select,
+.master-booking-form input {
+    width: 100%;
+    padding: 13px 15px;
+    border: 1px solid #e5d9ef;
+    border-radius: 11px;
+    background: white;
+    color: #554966;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.master-booking-form select:focus,
+.master-booking-form input:focus {
+    border-color: #b69ad5;
+}
+
+.master-booking-submit {
+    margin-top: 8px;
+    padding: 16px;
     border: none;
     border-radius: 12px;
     background: #b69ad5;
     color: white;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 600;
     cursor: pointer;
     transition: 0.2s;
 }
 
-.master-profile-book:hover {
-    background: #9c7bc1;
-    transform: translateY(-2px);
+.master-booking-submit:hover {
+    background: #9f81c5;
+    transform: translateY(-1px);
 }
+
+/* Пустой профиль */
 
 .master-profile-empty {
-    padding: 60px 20px;
     text-align: center;
-    color: #83758f;
-    font-size: 18px;
+    padding: 70px 20px;
+    background: white;
+    border-radius: 20px;
+    color: #786b88;
 }
 
-@media (max-width: 800px) {
-    .master-profile-card {
+.master-profile-empty a {
+    color: #9879b8;
+}
+
+/* Адаптив */
+
+@media (max-width: 850px) {
+    .master-profile-main {
         grid-template-columns: 1fr;
+    }
+
+    .master-profile-photo {
+        height: 400px;
+    }
+
+    .master-portfolio {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 550px) {
+    .master-profile-page {
+        padding: 0 12px 40px;
+        margin-top: 20px;
+    }
+
+    .profile-header {
+        padding: 18px;
+    }
+
+    .profile-logo {
+        font-size: 22px;
+    }
+
+    .profile-nav {
+        gap: 12px;
+    }
+
+    .profile-nav a {
+        font-size: 12px;
+    }
+
+    .master-profile-main,
+    .profile-section {
         padding: 20px;
     }
 
     .master-profile-photo {
-        height: 350px;
+        height: 320px;
     }
 
     .master-profile-name {
         font-size: 26px;
     }
-}
 
-@media (max-width: 480px) {
-    .profile-header {
-        padding: 20px;
+    .master-service-item {
+        flex-direction: column;
+        align-items: flex-start;
     }
 
-    .profile-logo {
-        font-size: 21px;
+    .master-service-details {
+        width: 100%;
+        justify-content: space-between;
     }
 
-    .profile-back {
-        font-size: 13px;
+    .master-portfolio {
+        grid-template-columns: 1fr 1fr;
     }
 
-    .master-profile-page {
-        margin: 20px auto;
-        padding: 0 12px;
+    .master-portfolio-item {
+        height: 160px;
+    }
+
+    .master-review-top {
+        flex-direction: column;
     }
 }
