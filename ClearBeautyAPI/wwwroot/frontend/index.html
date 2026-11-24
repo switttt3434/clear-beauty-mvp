@@ -1,0 +1,286 @@
+﻿
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Clear Beauty — поиск мастеров</title>
+<link href="css/style_beauty.css" rel="stylesheet"/>
+</head>
+<body>
+<!-- ШАПКА -->
+<header class="header">
+<div class="logo">
+<div class="logo-star">✦</div>
+<div class="logo-text">
+<h1>Clear Beauty</h1>
+<p>Услуги · Мастера · Салоны · Косметика</p>
+</div>
+</div>
+<div class="header-search">
+<span class="search-icon">⌕</span>
+<input placeholder="Поиск мастера, услуги или салона..." type="text"/>
+<div class="location"><span>⌖</span> Ижевск</div>
+</div>
+<div class="header-actions">
+<!-- Избранное пока без перехода -->
+<a href="favorites_beauty.html" class="favorite-link" title="Избранное">
+    ♡
+</a>
+<!-- Переход в профиль -->
+<a aria-label="Профиль" class="icon-button profile-icon" href="profile_beauty.html" title="Профиль">
+<svg fill="none" height="23" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" viewbox="0 0 24 24" width="23">
+<circle cx="12" cy="8" r="3.5"></circle>
+<path d="M5 20c0-3.5 3.1-5.7 7-5.7s7 2.2 7 5.7"></path>
+</svg>
+</a>
+</div>
+</header>
+<!-- ОСНОВНОЙ КОНТЕНТ -->
+<main class="layout">
+<!-- БОКОВЫЕ ФИЛЬТРЫ -->
+<aside class="filters">
+<div class="filter-block">
+<h3>⌖   Расстояние</h3>
+<p class="filter-description">От вашего местоположения</p>
+
+<div class="range-labels">
+<span>1 км</span>
+<span>20 км</span>
+</div>
+<input max="20" min="1" type="range" value="5"/>
+</div>
+<div class="filter-block">
+<h3>₽   Цена услуги</h3>
+<p class="filter-description">Выберите диапазон</p>
+<div class="range-labels">
+<span>от 500 ₽</span>
+<span>до 10 000 ₽</span>
+</div>
+<input aria-label="Максимальная цена услуги" class="price-range" max="10000" min="500" type="range" value="5000"/>
+</div>
+<div class="filter-block">
+<h3>☆   Рейтинг</h3>
+<p class="filter-description">Минимальный рейтинг</p>
+<div class="rating-filters"><input checked="checked" class="css-filter-radio" id="ratingAny" name="rating-filter" type="radio"/><label class="rating-option" for="ratingAny">☆<br/><small>Любой</small></label><input class="css-filter-radio" id="rating4" name="rating-filter" type="radio"/><label class="rating-option" for="rating4">☆<br/><small>4+</small></label><input class="css-filter-radio" id="rating45" name="rating-filter" type="radio"/><label class="rating-option" for="rating45">☆<br/><small>4.5+</small></label><input class="css-filter-radio" id="rating5" name="rating-filter" type="radio"/><label class="rating-option" for="rating5">☆<br/><small>5</small></label></div>
+</div>
+<div class="filter-block toggle-block">
+<div class="toggle-row">
+<span>▣   Онлайн-запись</span>
+<input checked="" type="checkbox"/>
+</div>
+<div class="toggle-row">
+<span>⌂   Мастер на дом</span>
+<input type="checkbox"/>
+</div>
+<div class="toggle-row">
+<span>◷   Работает сейчас</span>
+<input type="checkbox"/>
+</div>
+</div>
+<div class="filter-block categories-filter">
+<h3>▦   Категории</h3>
+<div class="category-filter-list"><input checked="checked" class="css-filter-radio" id="catAny" name="category-filter" type="radio"/><label class="category-filter-item" for="catAny">Все категории</label><input class="css-filter-radio" id="catManicure" name="category-filter" type="radio"/><label class="category-filter-item" for="catManicure">Маникюр</label><input class="css-filter-radio" id="catHair" name="category-filter" type="radio"/><label class="category-filter-item" for="catHair">Стрижки</label><input class="css-filter-radio" id="catColor" name="category-filter" type="radio"/><label class="category-filter-item" for="catColor">Окрашивание</label><input class="css-filter-radio" id="catBrows" name="category-filter" type="radio"/><label class="category-filter-item" for="catBrows">Брови</label><input class="css-filter-radio" id="catLashes" name="category-filter" type="radio"/><label class="category-filter-item" for="catLashes">Ресницы</label><input class="css-filter-radio" id="catCosmetology" name="category-filter" type="radio"/><label class="category-filter-item" for="catCosmetology">Косметология</label><input class="css-filter-radio" id="catMakeup" name="category-filter" type="radio"/><label class="category-filter-item" for="catMakeup">Макияж</label><input class="css-filter-radio" id="catMassage" name="category-filter" type="radio"/><label class="category-filter-item" for="catMassage">Массаж</label></div>
+</div>
+<button class="reset-filters">⟳   Сбросить фильтры</button>
+</aside>
+<!-- ПРАВАЯ ЧАСТЬ -->
+<div class="content">
+<!-- БАННЕР -->
+<section class="banner">
+<div class="banner-content">
+<h2>Порадуй себя<br/>любимой процедурой</h2>
+<p>Скидка 15% на первое посещение</p>
+<button class="banner-button">Подробнее →</button>
+</div>
+<div class="banner-image"></div>
+<div class="banner-dots">
+<span class="active"></span>
+<span></span>
+<span></span>
+<span></span>
+</div>
+</section>
+<!-- КАТЕГОРИИ -->
+<section class="popular-categories">
+<div class="section-heading">
+<h2>Популярные категории</h2>
+<a href="#">Все категории →</a>
+</div>
+<div class="category-grid">
+<div class="category-card">
+<div class="category-icon">♧</div>
+<p>Маникюр</p>
+</div>
+<div class="category-card">
+<div class="category-icon">⌁</div>
+<p>Стрижки</p>
+</div>
+<div class="category-card">
+<div class="category-icon">♧</div>
+<p>Окрашивание</p>
+</div>
+<div class="category-card">
+<div class="category-icon">◎</div>
+<p>Брови</p>
+</div>
+<div class="category-card">
+<div class="category-icon">⌁</div>
+<p>Ресницы</p>
+</div>
+<div class="category-card">
+<div class="category-icon">♙</div>
+<p>Косметология</p>
+</div>
+<div class="category-card">
+<div class="category-icon">♡</div>
+<p>Макияж</p>
+</div>
+<div class="category-card">
+<div class="category-icon">♧</div>
+<p>Массаж</p>
+</div>
+</div>
+</section>
+<!-- СПИСОК МАСТЕРОВ -->
+<section class="masters-section">
+<div class="masters-heading">
+<h2>Найдено 247 мастеров и салонов</h2>
+<div class="sorting">
+<span>Сортировать:</span>
+<select>
+<option>По популярности</option>
+<option>По рейтингу</option>
+<option>По цене</option>
+<option>По расстоянию</option>
+</select>
+</div>
+</div>
+<div class="masters-grid">
+<!-- КАРТОЧКА 1 -->
+<article class="master-card" data-category="hair color" data-rating="4.9">
+<div class="master-photo">
+<img alt="Анна Петрова" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&amp;fit=crop&amp;w=500&amp;q=80"/>
+<span class="online-badge">Онлайн-запись</span>
+</div>
+<div class="master-info">
+<button class="favorite">♡</button>
+<h3>Анна Петрова</h3>
+<p class="master-specialty">Парикмахер · Стрижки, окрашивание</p>
+<p class="master-rating">★ 4.9 <span>(124)</span></p>
+<p class="master-location">⌖ 3.2 км · Салон «Beauty Space»</p>
+<button class="details-button">Подробнее</button>
+</div>
+</article>
+<!-- КАРТОЧКА 2 -->
+<article class="master-card" data-category="manicure" data-rating="4.8">
+<div class="master-photo">
+<img alt="Мария Иванова" src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&amp;fit=crop&amp;w=500&amp;q=80"/>
+<span class="online-badge">Онлайн-запись</span>
+</div>
+<div class="master-info">
+<button class="favorite">♡</button>
+<h3>Мария Иванова</h3>
+<p class="master-specialty">Мастер маникюра · Маникюр, педикюр</p>
+<p class="master-rating">★ 4.8 <span>(98)</span></p>
+<p class="master-location">⌖ 1.8 км · Студия «Nail Lab»</p>
+<button class="details-button">Подробнее</button>
+</div>
+</article>
+<!-- КАРТОЧКА 3 -->
+<article class="master-card" data-category="color" data-rating="4.7">
+<div class="master-photo">
+<img alt="Екатерина Соколова" src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&amp;fit=crop&amp;w=500&amp;q=80"/>
+<span class="online-badge">Онлайн-запись</span>
+</div>
+<div class="master-info">
+<button class="favorite">♡</button>
+<h3>Екатерина Соколова</h3>
+<p class="master-specialty">Колорист · Окрашивание</p>
+<p class="master-rating">★ 4.7 <span>(76)</span></p>
+<p class="master-location">⌖ 4.5 км · Салон «Color Studio»</p>
+<button class="details-button">Подробнее</button>
+</div>
+</article>
+<!-- КАРТОЧКА 4 -->
+<article class="master-card" data-category="brows lashes" data-rating="4.9">
+<div class="master-photo">
+<img alt="Алина Кузнецова" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&amp;fit=crop&amp;w=500&amp;q=80"/>
+<span class="online-badge">Онлайн-запись</span>
+</div>
+<div class="master-info">
+<button class="favorite">♡</button>
+<h3>Алина Кузнецова</h3>
+<p class="master-specialty">Бровист · Брови, ресницы</p>
+<p class="master-rating">★ 4.9 <span>(132)</span></p>
+<p class="master-location">⌖ 2.7 км · Студия «Brow&amp;Lash»</p>
+<button class="details-button">Подробнее</button>
+</div>
+</article>
+<!-- КАРТОЧКА 5 -->
+<article class="master-card" data-category="cosmetology" data-rating="4.8">
+<div class="master-photo">
+<img alt="Ольга Смирнова" src="https://images.unsplash.com/photo-1552699611-e2c4e0b2c3f0?auto=format&amp;fit=crop&amp;w=500&amp;q=80"/>
+<span class="online-badge">Онлайн-запись</span>
+</div>
+<div class="master-info">
+<button class="favorite">♡</button>
+<h3>Ольга Смирнова</h3>
+<p class="master-specialty">Косметолог · Уходовые процедуры</p>
+<p class="master-rating">★ 4.8 <span>(64)</span></p>
+<p class="master-location">⌖ 5.1 км · Клиника «Skin Care»</p>
+<button class="details-button">Подробнее</button>
+</div>
+</article>
+<!-- КАРТОЧКА 6 -->
+<article class="master-card" data-category="makeup" data-rating="4.6">
+<div class="master-photo">
+<img alt="Виктория Федорова" src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&amp;fit=crop&amp;w=500&amp;q=80"/>
+<span class="online-badge">Онлайн-запись</span>
+</div>
+<div class="master-info">
+<button class="favorite">♡</button>
+<h3>Виктория Федорова</h3>
+<p class="master-specialty">Визажист · Макияж</p>
+<p class="master-rating">★ 4.6 <span>(53)</span></p>
+<p class="master-location">⌖ 3.9 км · Студия «Makeup Room»</p>
+<button class="details-button">Подробнее</button>
+</div>
+</article>
+<!-- КАРТОЧКА 7 -->
+<article class="master-card" data-category="massage" data-rating="4.9">
+<div class="master-photo">
+<img alt="Иван Беляев" src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&amp;fit=crop&amp;w=500&amp;q=80"/>
+<span class="online-badge">Онлайн-запись</span>
+</div>
+<div class="master-info">
+<button class="favorite">♡</button>
+<h3>Иван Беляев</h3>
+<p class="master-specialty">Массажист · Массаж</p>
+<p class="master-rating">★ 4.9 <span>(87)</span></p>
+<p class="master-location">⌖ 2.3 км · Салон «Relax»</p>
+<button class="details-button">Подробнее</button>
+</div>
+</article>
+<!-- КАРТОЧКА 8 -->
+<article class="master-card" data-category="all" data-rating="4.7">
+<div class="master-photo salon-photo">
+<img alt="Студия красоты Lumière" src="https://images.unsplash.com/photo-1600948836103-54d8a7d9b6f1?auto=format&amp;fit=crop&amp;w=500&amp;q=80"/>
+<span class="online-badge">Онлайн-запись</span>
+</div>
+<div class="master-info">
+<button class="favorite">♡</button>
+<h3>Студия красоты «Lumière»</h3>
+<p class="master-specialty">Салон · Комплексные услуги</p>
+<p class="master-rating">★ 4.7 <span>(215)</span></p>
+<p class="master-location">⌖ 1.6 км · Москва, ул. Лесная, 7</p>
+<button class="details-button">Подробнее</button>
+</div>
+</article>
+</div>
+</section>
+</div>
+</main>
+</body>
+</html>

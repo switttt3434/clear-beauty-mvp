@@ -1,0 +1,236 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мой профиль — Clear Beauty</title>
+    <link rel="stylesheet" href="css/style_beauty.css">
+</head>
+<body>
+
+    <!-- ШАПКА -->
+    <header class="header">
+        <a href="index.html" class="logo profile-logo">
+            <div class="logo-star">✦</div>
+            <div class="logo-text">
+                <h1>Clear Beauty</h1>
+                <p>Услуги · Мастера · Салоны · Косметика</p>
+            </div>
+        </a>
+
+        <div class="header-search">
+            <span class="search-icon">⌕</span>
+            <input type="text" placeholder="Поиск мастера, услуги или салона...">
+            <div class="location">
+                <span>♙</span>
+                Москва
+                <span>⌄</span>
+            </div>
+        </div>
+
+        <div class="header-actions">
+    <button class="icon-button" aria-label="Избранное" title="Избранное">
+        ♡
+    </button>
+
+    <a href="profile_beauty.html"
+       class="icon-button profile-icon active-profile"
+       aria-label="Профиль"
+       title="Профиль">
+
+        <svg viewBox="0 0 24 24"
+             width="23"
+             height="23"
+             fill="none"
+             stroke="currentColor"
+             stroke-width="1.6"
+             stroke-linecap="round"
+             stroke-linejoin="round">
+
+            <circle cx="12" cy="8" r="3.5"></circle>
+            <path d="M5 20c0-3.5 3.1-5.7 7-5.7s7 2.2 7 5.7"></path>
+        </svg>
+    </a>
+</div>
+    </header>
+
+    <!-- ПРОФИЛЬ -->
+    <main class="profile-page">
+
+        <div class="profile-page-heading">
+            <div>
+                <h2>Личный кабинет</h2>
+                <p>Управляйте записями и личной информацией</p>
+            </div>
+        </div>
+
+        <div class="profile-layout">
+
+            <!-- БОКОВОЕ МЕНЮ -->
+            <aside class="profile-sidebar">
+
+                <div class="profile-user-mini">
+                    <div class="avatar">А</div>
+                    <div>
+                        <h3>Анна</h3>
+                        <p>Пользователь Clear Beauty</p>
+                    </div>
+                </div>
+
+                <nav class="profile-navigation">
+                    <a href="#" class="profile-nav-item active">
+                        <span>♙</span>
+                        Мой профиль
+                    </a>
+
+                    <a href="#appointments" class="profile-nav-item">
+                        <span>▣</span>
+                        Мои записи
+                    </a>
+
+                    <a href="favorites_beauty.html" class="profile-nav-item">
+                        <span>♡</span>
+                        Избранное
+                    </a>
+
+                    <a href="#settings" class="profile-nav-item">
+                        <span>⚙</span>
+                        Настройки
+                    </a>
+                </nav>
+
+                <a href="index.html" class="back-to-site">
+                    ← Вернуться к поиску
+                </a>
+
+            </aside>
+
+            <!-- ОСНОВНАЯ ЧАСТЬ -->
+            <div class="profile-content">
+
+                <!-- ЛИЧНЫЕ ДАННЫЕ -->
+                <section class="profile-card personal-data">
+                    <div class="profile-card-heading">
+                        <h3>Личная информация</h3>
+                        <button class="edit-profile-button">Изменить</button>
+                    </div>
+
+                    <div class="personal-info">
+                        <div class="large-avatar">А</div>
+
+                        <div class="personal-info-text">
+                            <h2>Анна Смирнова</h2>
+                            <p>Добро пожаловать в Clear Beauty!</p>
+                        </div>
+                    </div>
+
+                    <div class="profile-fields">
+                        <div class="profile-field">
+                            <span>Имя</span>
+                            <strong>Анна</strong>
+                        </div>
+
+                        <div class="profile-field">
+                            <span>Фамилия</span>
+                            <strong>Смирнова</strong>
+                        </div>
+
+                        <div class="profile-field">
+                            <span>Телефон</span>
+                            <strong>+7 (999) 000-00-00</strong>
+                        </div>
+
+                        <div class="profile-field">
+                            <span>Электронная почта</span>
+                            <strong>anna@example.com</strong>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- БЛИЖАЙШАЯ ЗАПИСЬ -->
+                <section class="profile-card" id="appointments">
+                    <div class="profile-card-heading">
+                        <h3>Ближайшая запись</h3>
+                        <a href="#" class="text-link">Все записи →</a>
+                    </div>
+
+                    <div class="appointment-card">
+                        <div class="appointment-date">
+                            <span>ДЕК</span>
+                            <strong>12</strong>
+                        </div>
+
+                        <div class="appointment-info">
+                            <h4>Маникюр с покрытием</h4>
+                            <p>Мария Иванова · Nail Lab</p>
+                            <p>12 декабря · 15:00</p>
+                            <span class="appointment-status">Запись подтверждена</span>
+                        </div>
+
+                        <button class="appointment-more">Подробнее</button>
+                    </div>
+                </section>
+
+                <!-- ИЗБРАННОЕ -->
+                <section class="profile-card">
+                    <div class="profile-card-heading">
+                        <h3>Избранные мастера</h3>
+                        <a href="favorites_beauty.html" class="text-link">Все избранное →</a>
+                    </div>
+
+                    <div class="favorites-preview">
+
+                        <div class="favorite-master">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80" alt="Анна Петрова">
+                            <div>
+                                <h4>Анна Петрова</h4>
+                                <p>Парикмахер</p>
+                                <span>★ 4.9</span>
+                            </div>
+                            <button class="favorite-heart">♥</button>
+                        </div>
+
+                        <div class="favorite-master">
+                            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=300&q=80" alt="Мария Иванова">
+                            <div>
+                                <h4>Мария Иванова</h4>
+                                <p>Мастер маникюра</p>
+                                <span>★ 4.8</span>
+                            </div>
+                            <button class="favorite-heart">♥</button>
+                        </div>
+
+                    </div>
+                </section>
+
+                <!-- НАСТРОЙКИ -->
+                <section class="profile-card" id="settings">
+                    <div class="profile-card-heading">
+                        <h3>Настройки</h3>
+                    </div>
+
+                    <div class="settings-list">
+                        <a href="#">
+                            <span>Уведомления</span>
+                            <span>→</span>
+                        </a>
+
+                        <a href="#">
+                            <span>Изменение пароля</span>
+                            <span>→</span>
+                        </a>
+
+                        <a href="#">
+                            <span>Конфиденциальность</span>
+                            <span>→</span>
+                        </a>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
