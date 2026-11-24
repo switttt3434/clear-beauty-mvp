@@ -28,36 +28,43 @@
     }
 
     // === РЕНДЕР КАРТОЧЕК ===
-    function renderMasters(data) {
-        mastersGrid.innerHTML = "";
-        if (data.length === 0) {
-            mastersGrid.innerHTML = '<p class="empty-results">Ничего не найдено.</p>';
-            return;
-        }
-        data.forEach(master => {
-            const card = document.createElement("div");
-            card.className = "master-card";
-            card.dataset.masterId = master.id;
-            card.dataset.homeVisit = master.homeVisit;
-            card.dataset.openNow = master.openNow;
-            card.innerHTML = `
-                <img src="${master.imageUrl}" alt="${master.name}">
-                <div class="master-card-badges">
-                    ${master.onlineBooking ? '<span class="online-badge">Онлайн-запись</span>' : ''}
-                    <button class="favorite" type="button" data-favorite="${master.id}">♡</button>
-                </div>
-                <div class="master-info">
-                    <h3>${master.name}</h3>
-                    <p class="master-specialty">${master.specialization}</p>
-                    <div class="master-rating">★ ${master.rating} (${master.reviewsCount})</div>
-                    <div class="master-location">⌖ ${master.distance} км · ${master.salon}</div>
-                </div>
-                <button class="master-details-btn">Подробнее</button>
-            `;
-            mastersGrid.appendChild(card);
-        });
-        updateFavoriteButtons();
+   function renderMasters(data) {
+    mastersGrid.innerHTML = "";
+    
+    if (data.length === 0) {
+        mastersGrid.innerHTML = '<p class="empty-results">Ничего не найдено.</p>';
+        return;
     }
+
+    data.forEach(master => {
+        const card = document.createElement("div");
+        card.className = "master-card";
+        card.dataset.masterId = master.id;
+        card.dataset.homeVisit = master.homeVisit ? "true" : "false";
+        card.dataset.openNow = master.openNow ? "true" : "false";
+        card.dataset.category = (master.specialization || "").toLowerCase();
+
+     
+        card.innerHTML = `
+            <img src="${master.imageUrl || ''}" alt="${master.name}">
+            <div class="master-card-badges">
+                ${master.onlineBooking ? '<span class="online-badge">Онлайн-запись</span>' : ''}
+                <button class="favorite" type="button" data-favorite="${master.id}">♡</button>
+            </div>
+            <div class="master-info">
+                <h3>${master.name}</h3>
+                <p class="master-specialty">${master.specialization || ''}</p>
+                <div class="master-rating">★ ${master.rating} (${master.reviewsCount})</div>
+                <div class="master-location">⌖ ${master.distance} км · ${master.salon || ''}</div>
+            </div>
+            <button class="master-details-btn">Подробнее</button>
+        `;
+        
+        mastersGrid.appendChild(card);
+    });
+
+    updateFavoriteButtons();
+}
 
     // === ИЗБРАННОЕ (только ID) ===
     const STORAGE_KEY = "clearBeautyFavorites";
