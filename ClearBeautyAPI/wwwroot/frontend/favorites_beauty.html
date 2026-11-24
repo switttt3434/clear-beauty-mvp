@@ -1,128 +1,185 @@
-
 <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Избранное — Clear Beauty</title>
-    <link rel="stylesheet" href="css/style_beauty.css">
+    <title>Clear Beauty — Избранное</title>
+    <link href="css/style_beauty.css" rel="stylesheet">
 </head>
 <body>
 
+<!-- ШАПКА: полностью повторяет главную -->
 <header class="header">
-    <div class="header-container">
 
-        <a href="index.html" class="logo">Clear Beauty</a>
-
-        <nav class="navigation">
-            <a href="index.html">Главная</a>
-            <a href="index.html">Мастера</a>
-            <a href="favorites_beauty.html" class="active">Избранное</a>
-        </nav>
-
-        <div class="header-actions">
-            <a href="favorites_beauty.html" class="favorite-link" title="Избранное">
-                ♡
-            </a>
-
-            <a href="profile_beauty.html" class="profile-link" title="Профиль">
-                <img src="images/profile.png" alt="Профиль">
-            </a>
+    <div class="logo">
+        <div class="logo-star">✦</div>
+        <div class="logo-text">
+            <h1>Clear Beauty</h1>
+            <p>Услуги · Мастера · Салоны · Косметика</p>
         </div>
+    </div>
+
+    <div class="header-search">
+        <span class="search-icon">⌕</span>
+        <input type="text" placeholder="Поиск мастера, услуги или салона...">
+        <div class="location"> Ижевск</div>
+    </div>
+
+    <div class="header-actions">
+
+        <a aria-label="Избранное"
+           class="icon-button favorite-icon"
+           href="favorites_beauty.html"
+           title="Избранное">
+
+            <svg fill="none"
+                 height="23"
+                 stroke="currentColor"
+                 stroke-linecap="round"
+                 stroke-linejoin="round"
+                 stroke-width="1.6"
+                 viewBox="0 0 24 24"
+                 width="23">
+
+                <path d="M20.8 4.6a5.2 5.2 0 0 0-7.4 0L12 6l-1.4-1.4a5.2 5.2 0 0 0-7.4 7.4L12 20l8.2-8a5.2 5.2 0 0 0 .6-7.4z"></path>
+
+            </svg>
+        </a>
+
+        <a aria-label="Профиль"
+           class="icon-button profile-icon"
+           href="profile_beauty.html"
+           title="Профиль">
+
+            <svg fill="none"
+                 height="23"
+                 stroke="currentColor"
+                 stroke-linecap="round"
+                 stroke-linejoin="round"
+                 stroke-width="1.6"
+                 viewBox="0 0 24 24"
+                 width="23">
+
+                <circle cx="12" cy="8" r="3.5"></circle>
+                <path d="M5 20c0-3.5 3.1-5.7 7-5.7s7 2.2 7 5.7"></path>
+
+            </svg>
+        </a>
 
     </div>
 </header>
 
+<!-- ОСНОВНОЙ КОНТЕНТ -->
 <main class="favorites-page">
 
-    <div class="favorites-heading">
+    <section class="favorites-heading">
+
         <div>
             <p class="favorites-subtitle">CLEAR BEAUTY</p>
-            <h1>Избранное</h1>
+            <h2>Избранное</h2>
             <p class="favorites-description">
-                Здесь собраны мастера, которые вам понравились.
+                Ваши любимые мастера в одном месте
             </p>
         </div>
 
         <a href="index.html" class="back-to-catalog">
             ← Вернуться к поиску
         </a>
-    </div>
 
-    <section class="favorites-content">
+    </section>
 
-        <div class="favorites-grid">
+    <!-- КАРТОЧКИ ИЗБРАННЫХ МАСТЕРОВ -->
+    <section class="favorites-grid">
 
-            <!-- Карточка 1 -->
-            <article class="favorite-card">
+        <!-- Мастер 1 -->
+        <article class="favorite-card">
 
-                <div class="favorite-image">
-                    <img src="images/master1.jpg" alt="Мастер по волосам">
-                    <button class="favorite-heart" title="Удалить из избранного">♥</button>
+            <div class="favorite-image">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=500&q=80"
+                     alt="Анна Петрова">
+
+                <button class="favorite-heart" title="Избранное">♥</button>
+            </div>
+
+            <div class="favorite-card-info">
+
+                <div class="favorite-name-row">
+                    <h3>Анна Петрова</h3>
+                    <span class="favorite-rating">★ 4.9</span>
                 </div>
 
-                <div class="favorite-card-info">
-                    <div class="favorite-name-row">
-                        <h2>Анна Смирнова</h2>
-                        <span class="favorite-rating">★ 4.9</span>
-                    </div>
+                <p class="favorite-specialization">
+                    Парикмахер · Стрижки, окрашивание
+                </p>
 
-                    <p class="favorite-specialization">Парикмахер · Колорист</p>
+                <p class="favorite-location">
+                    ⌖ 3.2 км · Салон «Beauty Space»
+                </p>
 
-                    <p class="favorite-price">от 2 500 ₽</p>
+                <a href="#" class="favorite-details">Подробнее</a>
 
-                    <a href="#" class="favorite-details">Подробнее</a>
+            </div>
+        </article>
+
+        <!-- Мастер 2 -->
+        <article class="favorite-card">
+
+            <div class="favorite-image">
+                <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=500&q=80"
+                     alt="Мария Иванова">
+
+                <button class="favorite-heart" title="Избранное">♥</button>
+            </div>
+
+            <div class="favorite-card-info">
+
+                <div class="favorite-name-row">
+                    <h3>Мария Иванова</h3>
+                    <span class="favorite-rating">★ 4.8</span>
                 </div>
 
-            </article>
+                <p class="favorite-specialization">
+                    Мастер маникюра · Маникюр, педикюр
+                </p>
 
-            <!-- Карточка 2 -->
-            <article class="favorite-card">
+                <p class="favorite-location">
+                    ⌖ 1.8 км · Студия «Nail Lab»
+                </p>
 
-                <div class="favorite-image">
-                    <img src="images/master2.jpg" alt="Мастер маникюра">
-                    <button class="favorite-heart" title="Удалить из избранного">♥</button>
+                <a href="#" class="favorite-details">Подробнее</a>
+
+            </div>
+        </article>
+
+        <!-- Мастер 3 -->
+        <article class="favorite-card">
+
+            <div class="favorite-image">
+                <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=500&q=80"
+                     alt="Екатерина Соколова">
+
+                <button class="favorite-heart" title="Избранное">♥</button>
+            </div>
+
+            <div class="favorite-card-info">
+
+                <div class="favorite-name-row">
+                    <h3>Екатерина Соколова</h3>
+                    <span class="favorite-rating">★ 4.7</span>
                 </div>
 
-                <div class="favorite-card-info">
-                    <div class="favorite-name-row">
-                        <h2>Екатерина Волкова</h2>
-                        <span class="favorite-rating">★ 4.8</span>
-                    </div>
+                <p class="favorite-specialization">
+                    Колорист · Окрашивание
+                </p>
 
-                    <p class="favorite-specialization">Мастер маникюра</p>
+                <p class="favorite-location">
+                    ⌖ 4.5 км · Салон «Color Studio»
+                </p>
 
-                    <p class="favorite-price">от 1 800 ₽</p>
+                <a href="#" class="favorite-details">Подробнее</a>
 
-                    <a href="#" class="favorite-details">Подробнее</a>
-                </div>
-
-            </article>
-
-            <!-- Карточка 3 -->
-            <article class="favorite-card">
-
-                <div class="favorite-image">
-                    <img src="images/master3.jpg" alt="Мастер бровей">
-                    <button class="favorite-heart" title="Удалить из избранного">♥</button>
-                </div>
-
-                <div class="favorite-card-info">
-                    <div class="favorite-name-row">
-                        <h2>Мария Орлова</h2>
-                        <span class="favorite-rating">★ 5.0</span>
-                    </div>
-
-                    <p class="favorite-specialization">Бровист · Ламинирование</p>
-
-                    <p class="favorite-price">от 1 200 ₽</p>
-
-                    <a href="#" class="favorite-details">Подробнее</a>
-                </div>
-
-            </article>
-
-        </div>
+            </div>
+        </article>
 
     </section>
 
