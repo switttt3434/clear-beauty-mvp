@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Выгодные предложения — Clear Beauty</title>
+
+    <link rel="stylesheet" href="css/style_beauty.css">
+    <link rel="stylesheet" href="css/offers.css">
+</head>
+<body>
+
+<header class="offers-header">
+    <a href="index.html" class="offers-logo">Clear Beauty</a>
+
+    <nav class="offers-nav">
+        <a href="index.html">Главная</a>
+        <a href="favorites_beauty.html">Избранное</a>
+    </nav>
+</header>
+
+<main class="offers-page">
+
+    <section class="offers-intro">
+        <span class="offers-label">CLEAR BEAUTY · SPECIAL</span>
+        <h1>Выгодные предложения</h1>
+        <p>
+            Любимые бьюти-процедуры по приятным ценам.
+            Открывай новые места и пользуйся специальными предложениями.
+        </p>
+    </section>
+
+    <div class="offers-toolbar">
+        <h2>Акции и скидки</h2>
+
+        <select id="offers-sort">
+            <option value="default">Сначала популярные</option>
+            <option value="discount">По размеру скидки</option>
+            <option value="price">Сначала дешевле</option>
+        </select>
+    </div>
+
+    <div class="offers-grid" id="offers-grid">
+        <!-- Карточки добавляются через JavaScript -->
+    </div>
+
+</main>
+
+<script src="js/offers.js"></script>
+</body>
+</html>
