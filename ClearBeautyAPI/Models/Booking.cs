@@ -1,15 +1,15 @@
 ﻿namespace ClearBeautyAPI.Models
 {
-    public class booking
+    public class Booking
     {
-        public int id { get; set; }
-        public int serviceId { get; set; }
-        public string clientName { get; set; }
-        public string clientPhone { get; set; }
-        public DateTime bookingDate { get; set; } = DateTime.Now;
-        public string status { get; set; } = "pending";
+        public int Id { get; set; }
+        public int ServiceId { get; set; }
+        public string ClientName { get; set; }
+        public string ClientPhone { get; set; }
+        public DateTime BookingDate { get; set; } = DateTime.Now;
+        public string Status { get; set; } = "pending";
 
-        
-        public service service { get; set; }
+        // Навигационное свойство
+        public Service Service { get; set; }
     }
 }

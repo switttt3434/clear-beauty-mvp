@@ -2,17 +2,17 @@
 
 namespace ClearBeautyAPI.Models
 {
-    public class master
+    public class Master
     {
-        public int id { get; set; }
-        public string name { get; set; }
-        public string specialization { get; set; }
-        public string phone { get; set; }
-        public string district { get; set; }
-        public string address { get; set; }
-        public string description { get; set; }
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string Specialization { get; set; }
+        public string Phone { get; set; }
+        public string District { get; set; }
+        public string Address { get; set; }
+        public string Description { get; set; }
 
-        
-        public List<service> services { get; set; } = new List<service>();
+        // Навигационное свойство: у мастера много услуг
+        public List<Service> Services { get; set; } = new List<Service>();
     }
 }
