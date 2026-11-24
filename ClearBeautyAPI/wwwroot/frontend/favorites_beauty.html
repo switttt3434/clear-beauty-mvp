@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clear Beauty — Избранное</title>
+    <title>Избранное</title>
     <link href="css/style_beauty.css" rel="stylesheet">
     <link rel="stylesheet" href="css/extra_beauty.css">
 </head>
 <body>
 
-<!-- ШАПКА: полностью повторяет главную -->
+<!-- ШАПКА -->
 <header class="header">
 
     <div class="logo">
@@ -20,11 +20,6 @@
         </div>
     </div>
 
-    <div class="header-search">
-        <span class="search-icon">⌕</span>
-        <input type="text" placeholder="Поиск мастера, услуги или салона...">
-        <div class="location"> Ижевск</div>
-    </div>
 
     <div class="header-actions">
 
@@ -76,11 +71,8 @@
     <section class="favorites-heading">
 
         <div>
-            <p class="favorites-subtitle">CLEAR BEAUTY</p>
             <h2>Избранное</h2>
-            <p class="favorites-description">
-                Ваши любимые мастера в одном месте
-            </p>
+
         </div>
 
         <a href="index.html" class="back-to-catalog">
@@ -88,102 +80,14 @@
         </a>
 
     </section>
+<div class="favorites-empty" hidden>
+    <div class="favorites-empty-icon">♡</div>
+    <h2>Пока здесь пусто</h2>
+    <p>Добавляйте любимых мастеров в избранное, чтобы они всегда были под рукой.</p>
+</div>
 
-    <!-- КАРТОЧКИ ИЗБРАННЫХ МАСТЕРОВ -->
-    <section class="favorites-grid">
-
-        <!-- Мастер 1 -->
-        <article class="favorite-card">
-
-            <div class="favorite-image">
-                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=500&q=80"
-                     alt="Анна Петрова">
-
-                <button class="favorite-heart" title="Избранное">♥</button>
-            </div>
-
-            <div class="favorite-card-info">
-
-                <div class="favorite-name-row">
-                    <h3>Анна Петрова</h3>
-                    <span class="favorite-rating">★ 4.9</span>
-                </div>
-
-                <p class="favorite-specialization">
-                    Парикмахер · Стрижки, окрашивание
-                </p>
-
-                <p class="favorite-location">
-                    ⌖ 3.2 км · Салон «Beauty Space»
-                </p>
-
-                <a href="#" class="favorite-details">Подробнее</a>
-
-            </div>
-        </article>
-
-        <!-- Мастер 2 -->
-        <article class="favorite-card">
-
-            <div class="favorite-image">
-                <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=500&q=80"
-                     alt="Мария Иванова">
-
-                <button class="favorite-heart" title="Избранное">♥</button>
-            </div>
-
-            <div class="favorite-card-info">
-
-                <div class="favorite-name-row">
-                    <h3>Мария Иванова</h3>
-                    <span class="favorite-rating">★ 4.8</span>
-                </div>
-
-                <p class="favorite-specialization">
-                    Мастер маникюра · Маникюр, педикюр
-                </p>
-
-                <p class="favorite-location">
-                    ⌖ 1.8 км · Студия «Nail Lab»
-                </p>
-
-                <a href="#" class="favorite-details">Подробнее</a>
-
-            </div>
-        </article>
-
-        <!-- Мастер 3 -->
-        <article class="favorite-card">
-
-            <div class="favorite-image">
-                <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=500&q=80"
-                     alt="Екатерина Соколова">
-
-                <button class="favorite-heart" title="Избранное">♥</button>
-            </div>
-
-            <div class="favorite-card-info">
-
-                <div class="favorite-name-row">
-                    <h3>Екатерина Соколова</h3>
-                    <span class="favorite-rating">★ 4.7</span>
-                </div>
-
-                <p class="favorite-specialization">
-                    Колорист · Окрашивание
-                </p>
-
-                <p class="favorite-location">
-                    ⌖ 4.5 км · Салон «Color Studio»
-                </p>
-
-                <a href="#" class="favorite-details">Подробнее</a>
-
-            </div>
-        </article>
-
-    </section>
-
+<div class="masters-grid favorites-grid" hidden></div>
+    
 </main>
 
 <script src="js/script.js"></script>

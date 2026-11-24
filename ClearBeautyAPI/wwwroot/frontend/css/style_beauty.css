@@ -1635,3 +1635,40 @@ input[type="range"] {
         height: 110px;
     }
 }
+/* Активное сердечко */
+[data-favorite].active,
+[data-favorite].is-favorite {
+    color: #e66b91;
+}
+
+/* Пустое избранное */
+.favorites-empty {
+    width: 100%;
+    padding: 70px 20px;
+    text-align: center;
+}
+
+.favorites-empty[hidden] {
+    display: none !important;
+}
+
+.favorites-empty-icon {
+    font-size: 75px;
+    color: #c5a9d8;
+    margin-bottom: 20px;
+}
+
+.favorites-empty h2 {
+    color: #8c72a8;
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+.favorites-empty p {
+    color: #888;
+    font-size: 15px;
+    max-width: 400px;
+    margin: 0 auto 25px;
+    line-height: 1.6;
+}

@@ -1,0 +1,165 @@
+
+/* Страница профиля мастера */
+
+.profile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 7%;
+    background: #ffffff;
+    border-bottom: 1px solid #eee8f5;
+}
+
+.profile-logo {
+    font-size: 26px;
+    font-weight: 700;
+    color: #9274b5;
+    text-decoration: none;
+}
+
+.profile-back {
+    text-decoration: none;
+    color: #7e6b91;
+    font-size: 15px;
+}
+
+.master-profile-page {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 25px;
+}
+
+.master-profile-card {
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    gap: 40px;
+    padding: 35px;
+    background: #fff;
+    border-radius: 24px;
+    box-shadow: 0 8px 35px rgba(130, 100, 160, 0.08);
+}
+
+.master-profile-photo {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.master-profile-info {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.master-profile-name {
+    font-size: 32px;
+    color: #33283d;
+    margin: 0;
+}
+
+.master-profile-specialty {
+    font-size: 17px;
+    color: #9277b2;
+}
+
+.master-profile-rating {
+    font-size: 16px;
+    color: #d59b39;
+}
+
+.master-profile-description {
+    color: #77717e;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.master-profile-section {
+    margin-top: 25px;
+}
+
+.master-profile-section h2 {
+    color: #392e46;
+    font-size: 21px;
+}
+
+.master-profile-services {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.master-profile-service {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 15px 18px;
+    border-radius: 12px;
+    background: #f8f5fb;
+    color: #51445e;
+}
+
+.master-profile-price {
+    font-weight: 600;
+    color: #9273b2;
+    white-space: nowrap;
+}
+
+.master-profile-book {
+    margin-top: 20px;
+    padding: 16px 25px;
+    border: none;
+    border-radius: 12px;
+    background: #b69ad5;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.master-profile-book:hover {
+    background: #9c7bc1;
+    transform: translateY(-2px);
+}
+
+.master-profile-empty {
+    padding: 60px 20px;
+    text-align: center;
+    color: #83758f;
+    font-size: 18px;
+}
+
+@media (max-width: 800px) {
+    .master-profile-card {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    .master-profile-photo {
+        height: 350px;
+    }
+
+    .master-profile-name {
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-header {
+        padding: 20px;
+    }
+
+    .profile-logo {
+        font-size: 21px;
+    }
+
+    .profile-back {
+        font-size: 13px;
+    }
+
+    .master-profile-page {
+        margin: 20px auto;
+        padding: 0 12px;
+    }
+}
