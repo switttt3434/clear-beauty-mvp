@@ -18,25 +18,25 @@ namespace ClearBeautyAPI.Controllers
 
         // POST: api/bookings — создать запись
         [HttpPost]
-        public async Task<ActionResult<Booking>> CreateBooking(Booking booking)
+        public async Task<ActionResult<booking>> CreateBooking(booking booking)
         {
-            booking.Status = "pending";
-            booking.BookingDate = DateTime.Now;
+            booking.status = "pending";
+            booking.bookingDate = DateTime.Now;
 
             _context.Bookings.Add(booking);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction(nameof(GetBooking), new { id = booking.Id }, booking);
+            return CreatedAtAction(nameof(GetBooking), new { id = booking.id }, booking);
         }
 
         // GET: api/bookings/5 — получить запись по ID
         [HttpGet("{id}")]
-        public async Task<ActionResult<Booking>> GetBooking(int id)
+        public async Task<ActionResult<booking>> GetBooking(int id)
         {
             var booking = await _context.Bookings
-                .Include(b => b.Service)
+                .Include(b => b.service)
                     .ThenInclude(s => s.Master)
-                .FirstOrDefaultAsync(b => b.Id == id);
+                .FirstOrDefaultAsync(b => b.id == id);
 
             if (booking == null) return NotFound();
             return booking;

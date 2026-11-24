@@ -10,6 +10,6 @@
         public string status { get; set; } = "pending";
 
         
-        public Service service { get; set; }
+        public service service { get; set; }
     }
 }

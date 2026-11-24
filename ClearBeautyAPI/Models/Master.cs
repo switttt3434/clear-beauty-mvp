@@ -13,6 +13,6 @@ namespace ClearBeautyAPI.Models
         public string description { get; set; }
 
         
-        public List<Service> services { get; set; } = new List<Service>();
+        public List<service> services { get; set; } = new List<service>();
     }
 }

@@ -18,16 +18,16 @@ namespace ClearBeautyAPI.Controllers
 
         // GET: api/masters — список всех мастеров с их услугами
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Master>>> GetMasters([FromQuery] string? search)
+        public async Task<ActionResult<IEnumerable<master>>> GetMasters([FromQuery] string? search)
         {
-            var query = _context.Masters.Include(m => m.Services).AsQueryable();
+            var query = _context.Masters.Include(m => m.services).AsQueryable();
 
             if (!string.IsNullOrEmpty(search))
             {
                 query = query.Where(m =>
-                    m.Name.Contains(search) ||
-                    m.Specialization.Contains(search) ||
-                    m.District.Contains(search));
+                    m.name.Contains(search) ||
+                    m.specialization.Contains(search) ||
+                    m.district.Contains(search));
             }
 
             return await query.ToListAsync();
@@ -35,11 +35,11 @@ namespace ClearBeautyAPI.Controllers
 
         // GET: api/masters/5 — один мастер со всеми услугами
         [HttpGet("{id}")]
-        public async Task<ActionResult<Master>> GetMaster(int id)
+        public async Task<ActionResult<master>> GetMaster(int id)
         {
             var master = await _context.Masters
-                .Include(m => m.Services)
-                .FirstOrDefaultAsync(m => m.Id == id);
+                .Include(m => m.services)
+                .FirstOrDefaultAsync(m => m.id == id);
 
             if (master == null) return NotFound();
             return master;

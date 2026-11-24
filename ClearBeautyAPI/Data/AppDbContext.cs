@@ -7,23 +7,23 @@ namespace ClearBeautyAPI.Data
     {
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
-        public DbSet<Master> Masters { get; set; }
-        public DbSet<Service> Services { get; set; }
-        public DbSet<Booking> Bookings { get; set; }
+        public DbSet<master> Masters { get; set; }
+        public DbSet<service> Services { get; set; }
+        public DbSet<booking> Bookings { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             // Настройка связи: один мастер → много услуг
-            modelBuilder.Entity<Service>()
+            modelBuilder.Entity<service>()
                 .HasOne(s => s.Master)
-                .WithMany(m => m.Services)
-                .HasForeignKey(s => s.MasterId);
+                .WithMany(m => m.services)
+                .HasForeignKey(s => s.masterid);
 
             // Настройка связи: одна услуга → много записей
-            modelBuilder.Entity<Booking>()
-                .HasOne(b => b.Service)
-                .WithMany(s => s.Bookings)
-                .HasForeignKey(b => b.ServiceId);
+            modelBuilder.Entity<booking>()
+                .HasOne(b => b.service)
+                .WithMany(s => s.bookings)
+                .HasForeignKey(b => b.serviceId);
         }
     }
 }
